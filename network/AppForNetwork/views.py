@@ -59,6 +59,7 @@ def NetworkParams(request):
         params.accuracy = request.POST.get('accuracy')
         params.max_time = request.POST.get('max_time')
         params.classs = request.POST.get('classs')
+        params.amount_exit_class = request.POST.get('amount_exit_class')
         params.save()
 
     return Response('{0}'.format(network.id))
@@ -141,6 +142,8 @@ def NetworkTeaching(request):
         params = PARAMS.objects.get(id_network = id_networks)
         user = network.id_admin
 
+        phase = 'train'#нужно будит придумать как разделять запуски train и test 
+
         n_hiddens = params.amount_params
         n_layers = params.amount_layers
         f_activation = params.name_function
@@ -149,14 +152,17 @@ def NetworkTeaching(request):
         max_seconds = params.max_time
         min_loss = params.accuracy
         task_type = params.classs
-        phase = 'train'
-        # seed = ''
-        # verbose = ''
+        output_size = params.amount_exit_class
+        seed = 0
+        verbose = True
+
+        print(' output_size={0} \n n_layers = {1} \n f_activation = {2} \n data_path = {3} '\
+        .format(output_size,n_layers,f_activation,data_path))
 
         builder = PipelineBuilder()
 
         # Train
-        builder.set_model(n_hiddens, n_layers, f_activation, task_type)
+        builder.set_model(output_size , n_hiddens, n_layers, f_activation, task_type)
         builder.set_dataset(data_path )#, args.target_column)
 
         #weights_filename = 'username' + 'netname and idUser' + '.pth' #TODO
@@ -167,9 +173,9 @@ def NetworkTeaching(request):
 
         builder.build()
 
-        if args.phase == 'train':
-            builder.train(max_seconds , min_loss )
-        elif args.phase == 'test':
+        if phase == 'train':
+            builder.train(max_seconds, min_loss, seed, verbose)
+        elif phase == 'test':
             builder.test()
         else:
             print('Unknown phase!')

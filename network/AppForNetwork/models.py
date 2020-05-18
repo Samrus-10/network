@@ -25,6 +25,8 @@ class PARAMS(models.Model):
     accuracy = models.IntegerField()
     max_time = models.CharField(max_length = 30)
     classs = models.CharField(max_length = 30)
+    amount_exit_class = models.IntegerField()
+    
 
 class DESCRIPTIONS(models.Model):
 
