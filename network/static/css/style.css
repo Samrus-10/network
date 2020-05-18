@@ -1,0 +1,207 @@
+
+html { 
+    overflow-x: hidden;
+}
+
+.main{
+    margin-top: 1%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    height: 100%;   
+}
+
+#short_text{
+    width: 100%;
+    height: 100px;
+}
+
+#long_text{
+    width: 100%;
+    height: 200px;
+}
+.inputParam{
+    width: 75%;
+    border-radius: 5%;
+}
+
+.dataset_example{
+    width: 80%;
+    padding-left: 7%;
+}
+
+.dataset{
+    width:90%;
+    height: 60%;
+    padding: 0;
+}
+
+.button_dataset{
+    width: 20%;
+    margin-bottom: 5%;
+    /* margin-left: 100%; */
+
+}
+
+.result_teaching{
+
+    width: 80%;
+    padding-left: 7%;
+
+}
+
+.button_teaching{
+    width: 30%;
+    height: 60%;
+    margin-left: 5%;
+}
+
+.param{
+    margin-top: 3%;
+}
+
+.params{
+    width: 50%;
+    height: 30%;
+    border: 3%;
+    border-radius: 5%;
+    margin-left: 25%;
+}
+
+.comment{
+    width: 75%;
+}
+
+.label_choose{
+    width: 50%;
+}
+
+.input_choose{
+    width: 75%;
+}
+
+.teaching_jum{
+    margin-bottom: 1%;
+}
+
+.exit_reg{
+    margin-top: 27%;
+    padding-bottom: 5%;
+}
+
+.btn_save{
+    margin-bottom: 0%;
+    margin-top: 5%;
+}
+
+.h3_network{
+    margin-top: 0;
+}
+
+.p_network{
+    margin-top: 10%;
+}
+
+.open_network{
+    margin-top:90%;
+    margin-bottom: 0%; 
+}
+
+.networ_jum{
+    margin-top: 1%;
+}
+
+.name_panel{
+    width: 50%;
+    height: 30%;
+
+}
+
+.helper{
+    display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.all_jum{
+    padding-bottom: 1%;
+    margin-top: 1%;
+}
+
+.name_panel.big{
+    width: 50%;
+    height: 50%;
+}
+
+.footer{
+    margin-top: 7%;
+    background-color: #2B689C;
+    width: 100%;
+    height: 20%;
+}
+
+/* #1A263D; */
+
+#here{
+    padding: 0%;
+}
+
+.exit_button{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#text_footer{
+    margin-top: 7%;
+    font-family: monospace;
+    color: #DBD1D1;
+}
+
+/* #add_bd{
+    width: 30%;
+    height: 60%;
+    margin-left: 1%;
+} */
+
+#image_add_bd{
+    width: 30%;
+    height: 60%;
+}
+
+
+.button_dataset{
+    margin-left: 3%;
+    width: 37%;
+    height: 30%;
+}
+
+.headers_dataset{
+    margin-top: 0;
+}
+
+#label_dataset{
+    vertical-align: middle;
+}
+
+#label_text{
+    vertical-align: middle;
+}
+
+#icon_file_exel{
+    width: 40%;
+}
+
+.hidding_div{
+    /* display: none; */
+    margin-top: 3%;
+}
+
+.div_center{
+    display: flex;
+    justify-content: center;
+    height: 100%;     
+}
